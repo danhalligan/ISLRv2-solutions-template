@@ -23,7 +23,7 @@ To complete your solutions, please [generate a new repository] from this
 commented questions using [R markdown].
 
 All questions from the original book have been translated to markdown and are
-quoted. You should provide you answers between the commented sections. 
+quoted. You should provide your answers between the commented sections. 
 For example:
 
 
@@ -36,8 +36,8 @@ For example:
 >    small.
 
 In this case, a flexible method would be better because we have a large number
-of observations so can more reliably detect subtle patterns in the data without
-risk of overfitting due to the low number of predictors.
+of observations so can more reliably detect subtle patterns in the data and are
+likely to avoid overfitting due to the low number of predictors.
 
 > b. The number of predictors p is extremely large, and the number of
 >    observations n is small.
@@ -45,7 +45,7 @@ risk of overfitting due to the low number of predictors.
 Erm, perhaps the opposite?
 ```
 
-You may want to edit this README (to reflect that your version is not a
+You may want to edit this `README.md` (to reflect that your version is not a
 template!), and edit the `edit` tag in `_output.yml` to point to your
 repository.
 
@@ -91,7 +91,7 @@ book build works as expected.
 ### Styling
 
 I've added some (minimal) styling for the book inside `islrv2.css`, notably,
-using [Computer Modern] in homage to the the book (and the rest of this fonts
+using [Computer Modern] in homage to the the book (and the rest of this font's
 history!). To achieve this, I've made use of a [web version] of computer modern.
 
 ## Final words

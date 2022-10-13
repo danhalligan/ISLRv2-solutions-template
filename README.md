@@ -10,7 +10,7 @@ Hastie and Robert Tibshirani.
 ## tl;dr
 
 * [Generate a new repository from this template].
-* Fill in your answers in R Markdown between the commented questions.
+* Fill in your answers in [R Markdown] between the commented questions.
 * Push your edits to build your [bookdown book of solutions].
 
 [Generate a new repository from this template]: https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
@@ -20,14 +20,14 @@ Hastie and Robert Tibshirani.
 
 To complete your solutions, please [generate a new repository] from this
  template this repository first. You can then add solutions between the relevant
-commented questions using [`Rmarkdown`](https://rmarkdown.rstudio.com/).
+commented questions using [R markdown].
 
 All questions from the original book have been translated to markdown and are
 quoted. You should provide you answers between the commented sections. 
 For example:
 
 
-```md
+```markdown
 > For each of parts (a) through (d), indicate whether we would generally expect
 > the performance of a flexible statistical learning method to be better or
 > worse than an inflexible method. Justify your answer.
@@ -101,6 +101,7 @@ Many thanks for the original authors for a great book on statistical learning.
 If you notice any errors, feel free to make a pull request.
 
 [bookdown]: https://bookdown.org/
+[R Markdown]: https://rmarkdown.rstudio.com/
 [GitHub template]: https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/
 [An Introduction to Statistical Learning]: https://www.statlearning.com/
 [generate a new repository]: https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template

@@ -374,8 +374,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="question-1-1" class="section level3 hasAnchor">
 <h3><span class="header-section-number">3.1.1</span> Question 1<a href="linear-regression.html#question-1-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <blockquote>
-<p>Describe the null hypotheses to which the p-values given in Table 3.4
-correspond. Explain what conclusions you can draw based on these p-values.
+<p>Describe the null hypotheses to which the _p_values given in Table 3.4
+correspond. Explain what conclusions you can draw based on these _p_values.
 Your explanation should be phrased in terms of <code>sales</code>, <code>TV</code>, <code>radio</code>, and
 <code>newspaper</code>, rather than in terms of the coefficients of the linear model.</p>
 </blockquote>
@@ -559,25 +559,25 @@ from (e)?</p></li>
 <div id="question-11" class="section level3 hasAnchor">
 <h3><span class="header-section-number">3.2.4</span> Question 11<a href="linear-regression.html#question-11" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <blockquote>
-<p>In this problem we will investigate the t-statistic for the null hypothesis
+<p>In this problem we will investigate the <em>t</em>-statistic for the null hypothesis
 <span class="math inline">\(H_0 : \beta = 0\)</span> in simple linear regression without an intercept. To
 begin, we generate a predictor <code>x</code> and a response <code>y</code> as follows.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="linear-regression.html#cb8-1"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
 <span id="cb8-2"><a href="linear-regression.html#cb8-2"></a>x &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">100</span>)</span>
 <span id="cb8-3"><a href="linear-regression.html#cb8-3"></a>y &lt;-<span class="st"> </span><span class="dv">2</span> <span class="op">*</span><span class="st"> </span>x <span class="op">+</span><span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">100</span>)</span></code></pre></div>
 <ol style="list-style-type: lower-alpha">
-<li><p>Perform a simple linear regression of <code>y</code> onto <code>x</code>, without an intercept.
+<li><p>Perform a simple linear regression of <code>y</code> onto <code>x</code>, <em>without</em> an intercept.
 Report the coefficient estimate <span class="math inline">\(\hat{\beta}\)</span>, the standard error of this
-coefficient estimate, and the t-statistic and p-value associated with the
+coefficient estimate, and the <em>t</em>-statistic and _p_value associated with the
 null hypothesis <span class="math inline">\(H_0 : \beta = 0\)</span>. Comment on these results. (You can
 perform regression without an intercept using the command <code>lm(y~x+0)</code>.)</p></li>
 <li><p>Now perform a simple linear regression of <code>x</code> onto <code>y</code> without an intercept,
 and report the coefficient estimate, its standard error, and the
-corresponding t-statistic and p-values associated with the null hypothesis
+corresponding <em>t</em>-statistic and _p_values associated with the null hypothesis
 <span class="math inline">\(H_0 : \beta = 0\)</span>. Comment on these results.</p></li>
 <li><p>What is the relationship between the results obtained in (a) and (b)?</p></li>
 <li><p>For the regression of <span class="math inline">\(Y\)</span> onto <span class="math inline">\(X\)</span> without an intercept, the
-t-statistic for <span class="math inline">\(H_0 : \beta = 0\)</span> takes the form
+<em>t</em>-statistic for <span class="math inline">\(H_0 : \beta = 0\)</span> takes the form
 <span class="math inline">\(\hat{\beta}/SE(\hat{\beta})\)</span>, where <span class="math inline">\(\hat{\beta}\)</span> is given by (3.38), and
 where
 <span class="math display">\[
@@ -585,7 +585,7 @@ SE(\hat\beta) = \sqrt{\frac{\sum_{i=1}^n(y_i - x_i\hat\beta)^2}{(n-1)\sum_{i&#39
 \]</span>
 (These formulas are slightly different from those given in Sections 3.1.1 and
 3.1.2, since here we are performing regression without an intercept.) Show
-algebraically, and confirm numerically in R, that the t-statistic can be
+algebraically, and confirm numerically in R, that the <em>t</em>-statistic can be
 written as
 <span class="math display">\[
 \frac{(\sqrt{n-1}) \sum_{i-1}^nx_iy_i)}
@@ -595,7 +595,7 @@ written as
 regression of y onto x is the same as the <em>t</em>-statistic for the regression
 of <code>x</code> onto <code>y</code>.</p></li>
 <li><p>In <code>R</code>, show that when regression is performed <em>with</em> an intercept, the
-<span class="math inline">\(t\)</span>-statistic for <span class="math inline">\(H_0 : \beta_1 = 0\)</span> is the same for the regression of <code>y</code>
+<em>t</em>-statistic for <span class="math inline">\(H_0 : \beta_1 = 0\)</span> is the same for the regression of <code>y</code>
 onto <code>x</code> as it is for the regression of <code>x</code> onto <code>y</code>.</p></li>
 </ol>
 </blockquote>

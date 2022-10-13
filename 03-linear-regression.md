@@ -4,8 +4,8 @@
 
 ### Question 1
 
-> Describe the null hypotheses to which the p-values given in Table 3.4
-> correspond. Explain what conclusions you can draw based on these p-values.
+> Describe the null hypotheses to which the _p_values given in Table 3.4
+> correspond. Explain what conclusions you can draw based on these _p_values.
 > Your explanation should be phrased in terms of `sales`, `TV`, `radio`, and
 > `newspaper`, rather than in terms of the coefficients of the linear model.
 
@@ -177,7 +177,7 @@
 
 ### Question 11
 
-> In this problem we will investigate the t-statistic for the null hypothesis
+> In this problem we will investigate the _t_-statistic for the null hypothesis
 > $H_0 : \beta = 0$ in simple linear regression without an intercept. To
 > begin, we generate a predictor `x` and a response `y` as follows.
 > ```r
@@ -186,21 +186,21 @@
 > y <- 2 * x + rnorm(100)
 > ```
 >
-> a. Perform a simple linear regression of `y` onto `x`, without an intercept.
+> a. Perform a simple linear regression of `y` onto `x`, _without_ an intercept.
 >    Report the coefficient estimate $\hat{\beta}$, the standard error of this
->    coefficient estimate, and the t-statistic and p-value associated with the
+>    coefficient estimate, and the _t_-statistic and _p_value associated with the
 >    null hypothesis $H_0 : \beta = 0$. Comment on these results. (You can
 >    perform regression without an intercept using the command `lm(y~x+0)`.)
 >
 > b. Now perform a simple linear regression of `x` onto `y` without an intercept,
 >    and report the coefficient estimate, its standard error, and the
->    corresponding t-statistic and p-values associated with the null hypothesis
+>    corresponding _t_-statistic and _p_values associated with the null hypothesis
 >    $H_0 : \beta = 0$. Comment on these results.
 >
 > c. What is the relationship between the results obtained in (a) and (b)?
 >
 > d. For the regression of $Y$ onto $X$ without an intercept, the
->    t-statistic for $H_0 : \beta = 0$ takes the form 
+>    _t_-statistic for $H_0 : \beta = 0$ takes the form 
 >    $\hat{\beta}/SE(\hat{\beta})$, where $\hat{\beta}$ is given by (3.38), and
 >    where
 >    $$
@@ -208,19 +208,19 @@
 >    $$
 >    (These formulas are slightly different from those given in Sections 3.1.1 and
 >    3.1.2, since here we are performing regression without an intercept.) Show
->    algebraically, and confirm numerically in R, that the t-statistic can be
+>    algebraically, and confirm numerically in R, that the _t_-statistic can be
 >    written as
 >    $$
 >    \frac{(\sqrt{n-1}) \sum_{i-1}^nx_iy_i)}
 >         {\sqrt{(\sum_{i=1}^nx_i^2)(\sum_{i'=1}^ny_{i'}^2)-(\sum_{i'=1}^nx_{i'}y_{i'})^2}}
 >    $$
 >
-> e. Using the results from (d), argue that the *t*-statistic for the
->    regression of y onto x is the same as the *t*-statistic for the regression
+> e. Using the results from (d), argue that the _t_-statistic for the
+>    regression of y onto x is the same as the _t_-statistic for the regression
 >    of `x` onto `y`.
 >
-> f. In `R`, show that when regression is performed *with* an intercept, the
->    $t$-statistic for $H_0 : \beta_1 = 0$ is the same for the regression of `y`
+> f. In `R`, show that when regression is performed _with_ an intercept, the
+>    _t_-statistic for $H_0 : \beta_1 = 0$ is the same for the regression of `y`
 >    onto `x` as it is for the regression of `x` onto `y`.
 
 ### Question 12

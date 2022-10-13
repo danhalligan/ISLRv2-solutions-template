@@ -41,15 +41,15 @@
 >    repeatedly create bootstrap samples, and each time we record whether or not
 >    the fourth observation is contained in the bootstrap sample.
 >    
->     ```r
->     > store <- rep (NA, 10000)
->     > for (i in 1:10000) {
->         store[i] <= sum(sample(1:100, rep = TRUE) == 4) > 0
->     }
->     > mean(store)
->     ```
->     
->     Comment on the results obtained.
+>    ```r
+>    > store <- rep (NA, 10000)
+>    > for (i in 1:10000) {
+>        store[i] <= sum(sample(1:100, rep = TRUE) == 4) > 0
+>    }
+>    > mean(store)
+>    ```
+>    
+>    Comment on the results obtained.
 
 ### Question 3
 
@@ -59,8 +59,8 @@
 >
 > b. What are the advantages and disadvantages of $k$-fold cross-validation
 >    relative to:
->     i. The validation set approach?
->     ii. LOOCV?
+>    i. The validation set approach?
+>    ii. LOOCV?
 
 ### Question 4
 
@@ -83,16 +83,16 @@
 >
 > b. Using the validation set approach, estimate the test error of this model.
 >    In order to do this, you must perform the following steps:
->     i. Split the sample set into a training set and a validation set.
->     ii. Fit a multiple logistic regression model using only the training
->     observations.
->     iii. Obtain a prediction of default status for each individual in
->     the validation set by computing the posterior probability of
->     default for that individual, and classifying the individual to
->     the `default` category if the posterior probability is greater
->     than 0.5.
->     iv. Compute the validation set error, which is the fraction of
->     the observations in the validation set that are misclassified.
+>    i. Split the sample set into a training set and a validation set.
+>    ii. Fit a multiple logistic regression model using only the training
+>    observations.
+>    iii. Obtain a prediction of default status for each individual in
+>    the validation set by computing the posterior probability of
+>    default for that individual, and classifying the individual to
+>    the `default` category if the posterior probability is greater
+>    than 0.5.
+>    iv. Compute the validation set error, which is the fraction of
+>    the observations in the validation set that are misclassified.
 >
 > c. Repeat the process in (b) three times, using three different splits of the
 >    observations into a training set and a validation set. Comment on the
@@ -154,15 +154,15 @@
 >
 > d. Write a for loop from $i = 1$ to $i = n$, where $n$ is the number of
 >    observations in the data set, that performs each of the following steps:
->     i.   Fit a logistic regression model using all but the $i$th observation
->          to predict `Direction` using `Lag1` and `Lag2` .
->     ii.  Compute the posterior probability of the market moving up
->          for the $i$th observation.
->     iii. Use the posterior probability for the $i$th observation in order
->          to predict whether or not the market moves up.
->     iv.  Determine whether or not an error was made in predicting the
->          direction for the $i$th observation. If an error was made, then
->          indicate this as a 1, and otherwise indicate it as a 0.
+>    i.   Fit a logistic regression model using all but the $i$th observation
+>         to predict `Direction` using `Lag1` and `Lag2` .
+>    ii.  Compute the posterior probability of the market moving up
+>         for the $i$th observation.
+>    iii. Use the posterior probability for the $i$th observation in order
+>         to predict whether or not the market moves up.
+>    iv.  Determine whether or not an error was made in predicting the
+>         direction for the $i$th observation. If an error was made, then
+>         indicate this as a 1, and otherwise indicate it as a 0.
 >
 > e. Take the average of the $n$ numbers obtained in (d) in order to obtain the
 >    LOOCV estimate for the test error. Comment on the results.
@@ -172,13 +172,11 @@
 > We will now perform cross-validation on a simulated data set.
 >
 > a. Generate a simulated data set as follows:
->     
->     ```r
->     > set.seed(1)
->     > x=rnorm(100)
->     > y=x-2*x^2+rnorm(100)
->     ```
->    
+>    ```r
+>    > set.seed(1)
+>    > x <- rnorm(100)
+>    > y <- x - 2 * x^2 + rnorm(100)
+>    ```
 >    In this data set, what is $n$ and what is $p$? Write out the model
 >    used to generate the data in equation form.
 >
@@ -186,10 +184,10 @@
 >
 > c. Set a random seed, and then compute the LOOCV errors that result from
 >    fitting the following four models using least squares:
->     i.   $Y = \beta_0 + \beta_1 X + \epsilon$
->     ii.  $Y = \beta_0 + \beta_1 X + \beta_2 X^2 + \epsilon$
->     iii. $Y = \beta_0 + \beta_1 X + \beta_2 X^2 + \beta_3 X^3 + \epsilon$
->     iv.  $Y = \beta_0 + \beta_1 X + \beta_2 X^2 + \beta_3 X^3 + \beta_4 X^4 + \epsilon$.
+>    i.   $Y = \beta_0 + \beta_1 X + \epsilon$
+>    ii.  $Y = \beta_0 + \beta_1 X + \beta_2 X^2 + \epsilon$
+>    iii. $Y = \beta_0 + \beta_1 X + \beta_2 X^2 + \beta_3 X^3 + \epsilon$
+>    iv.  $Y = \beta_0 + \beta_1 X + \beta_2 X^2 + \beta_3 X^3 + \beta_4 X^4 + \epsilon$.
 >
 >    Note you may find it helpful to use the `data.frame()` function
 >    to create a single data set containing both $X$ and $Y$.
@@ -211,36 +209,36 @@
 > library.
 >
 > a.  Based on this data set, provide an estimate for the population mean of
->     `medv`. Call this estimate $\hat\mu$.
+>    `medv`. Call this estimate $\hat\mu$.
 >
-> b.  Provide an estimate of the standard error of $\hat\mu$. Interpret this
->     result.
+> b. Provide an estimate of the standard error of $\hat\mu$. Interpret this
+>    result.
 >
->     _Hint: We can compute the standard error of the sample mean by
->     dividing the sample standard deviation by the square root of the number of
->     observations._
+>    _Hint: We can compute the standard error of the sample mean by
+>    dividing the sample standard deviation by the square root of the number of
+>    observations._
 >
-> c.  Now estimate the standard error of $\hat\mu$ using the bootstrap. How does
->     this compare to your answer from (b)?
+> c. Now estimate the standard error of $\hat\mu$ using the bootstrap. How does
+>    this compare to your answer from (b)?
 >
-> d.  Based on your bootstrap estimate from (c), provide a 95% confidence
->     interval for the mean of `medv`. Compare it to the results obtained using
->     `t.test(Boston$medv)`.
+> d. Based on your bootstrap estimate from (c), provide a 95% confidence
+>    interval for the mean of `medv`. Compare it to the results obtained using
+>    `t.test(Boston$medv)`.
 >
->     _Hint: You can approximate a 95% confidence interval using the
->     formula $[\hat\mu − 2SE(\hat\mu),  \hat\mu + 2SE(\hat\mu)].$_
+>    _Hint: You can approximate a 95% confidence interval using the
+>    formula $[\hat\mu − 2SE(\hat\mu),  \hat\mu + 2SE(\hat\mu)].$_
 >
-> e.  Based on this data set, provide an estimate, $\hat\mu_{med}$, for the
->     median value of `medv` in the population.
+> e. Based on this data set, provide an estimate, $\hat\mu_{med}$, for the
+>    median value of `medv` in the population.
 >
-> f.  We now would like to estimate the standard error of $\hat\mu_{med}$.
->     Unfortunately, there is no simple formula for computing the standard error
->     of the median. Instead, estimate the standard error of the median using
->     the bootstrap. Comment on your findings.
+> f. We now would like to estimate the standard error of $\hat\mu_{med}$.
+>    Unfortunately, there is no simple formula for computing the standard error
+>    of the median. Instead, estimate the standard error of the median using
+>    the bootstrap. Comment on your findings.
 >
-> g.  Based on this data set, provide an estimate for the tenth percentile of
->     `medv` in Boston census tracts. Call this quantity $\hat\mu_{0.1}$. (You
->     can use the `quantile()` function.)
+> g. Based on this data set, provide an estimate for the tenth percentile of
+>    `medv` in Boston census tracts. Call this quantity $\hat\mu_{0.1}$. (You
+>    can use the `quantile()` function.)
 >
-> h.  Use the bootstrap to estimate the standard error of $\hat\mu_{0.1}$.
->     Comment on your findings.
+> h. Use the bootstrap to estimate the standard error of $\hat\mu_{0.1}$.
+>    Comment on your findings.

@@ -9,10 +9,11 @@ Hastie and Robert Tibshirani.
 
 ## tl;dr
 
-* Generate a new repository from this template.
-* Fill in your answers in rmarkdown between the commented questions.
-* Push to GitHub to build you [bookdown book of solutions].
+* [Generate a new repository from this template].
+* Fill in your answers in R Markdown between the commented questions.
+* Push your edits to build your [bookdown book of solutions].
 
+[Generate a new repository from this template]: https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
 [bookdown book of solutions]: https://danhalligan.github.io/ISLRv2-solutions-template/
 
 ## Usage
@@ -69,7 +70,7 @@ To build the book locally you can run:
 bookdown::render_book('index.Rmd', 'bookdown::gitbook')
 ```
 
-Or hit the "build" button in your rstudio session.
+Or hit the "build" button in your RStudio session.
 
 ### GitHub workflow
 
